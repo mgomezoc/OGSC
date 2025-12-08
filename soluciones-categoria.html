@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>OGSC SUPPORT MEXICO | Soluciones por categoría</title>
+    <meta
+      name="description"
+      content="Soluciones por categoría de SEPCO: empaquetaduras de compresión, sellos mecánicos y protección de cojinetes para aplicaciones industriales."
+    />
+    <meta
+      name="keywords"
+      content="SEPCO, soluciones por categoría, empaquetaduras de compresión, sellos mecánicos, protección de cojinetes, OGSC SUPPORT MEXICO"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Estilos con LESS (mismo esquema que index.html) -->
+    <link rel="stylesheet/less" type="text/css" href="css/style.less" />
+
+    <!-- Font Awesome kit v7 -->
+    <script src="https://kit.fontawesome.com/fdd43600c0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/less@4.2.0"></script>
+    <script src="js/main.js" defer></script>
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- =========================
+           HEADER / NAVEGACIÓN (nuevo menú)
+      ========================== -->
+      <header class="site-header" id="top">
+        <div class="container nav-inner">
+          <a href="index.html#top" class="brand">
+            <picture class="brand-logo">
+              <source srcset="img/favicon.png" type="image/png" />
+              <img
+                src="img/logo-ogsc.jpeg"
+                alt="Logo OGSC SUPPORT MEXICO"
+                loading="lazy"
+                width="120"
+                height="40"
+              />
+            </picture>
+            <span class="brand-text">
+              <span class="brand-text-main">OGSC SUPPORT MEXICO</span><br />
+              <span class="brand-text-sub">TOGETHER WORKING</span>
+            </span>
+          </a>
+
+          <nav class="nav-desktop" aria-label="Navegación principal">
+            <a href="index.html#quienes-somos">Quiénes somos</a>
+            <a href="index.html#presencia">Presencia</a>
+
+            <div class="nav-dropdown">
+              <button class="nav-dropdown-trigger" aria-expanded="false">
+                Productos
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="nav-dropdown-menu">
+                <a href="index.html#lineas">Productos y servicios</a>
+                <a href="index.html#intercambiadores">Intercambiadores de calor</a>
+                <a href="index.html#aislamientos">Aislamientos térmicos</a>
+                <a href="index.html#sellos-mecanicos">Sellos mecánicos</a>
+                <a href="index.html#empac">Empaquetadura</a>
+                <a href="index.html#laminas">Láminas</a>
+                <a href="index.html#protectores">Protectores de rodamientos</a>
+              </div>
+            </div>
+
+            <a href="soluciones-categoria.html">Soluciones</a>
+            <a href="index.html#contacto">Contacto</a>
+          </nav>
+
+          <div class="nav-actions">
+            <a href="index.html#contacto" class="btn btn-primary">
+              <i class="fa-solid fa-file-signature"></i>
+              Cotización
+            </a>
+          </div>
+
+          <button class="nav-toggle" type="button" aria-label="Abrir navegación" id="navToggle">
+            <span class="nav-toggle-icon"></span>
+          </button>
+        </div>
+
+        <!-- Menú móvil mejorado (mismo patrón que index) -->
+        <div class="nav-mobile" id="navMobile">
+          <div class="container">
+            <div class="nav-mobile-inner">
+              <div class="nav-mobile-links">
+                <a href="index.html#quienes-somos" class="nav-mobile-link">
+                  <i class="fa-solid fa-building"></i>
+                  <span>Quiénes somos</span>
+                </a>
+                <a href="index.html#presencia" class="nav-mobile-link">
+                  <i class="fa-solid fa-map-marker-alt"></i>
+                  <span>Presencia</span>
+                </a>
+
+                <div class="nav-mobile-group">
+                  <button class="nav-mobile-group-trigger" aria-expanded="false">
+                    <span>
+                      <i class="fa-solid fa-box"></i>
+                      <span>Productos y servicios</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <div class="nav-mobile-group-content">
+                    <a href="index.html#lineas">Líneas de productos</a>
+                    <a href="index.html#intercambiadores">Intercambiadores de calor</a>
+                    <a href="index.html#aislamientos">Aislamientos térmicos</a>
+                    <a href="index.html#sellos-mecanicos">Sellos mecánicos</a>
+                    <a href="index.html#empac">Empaquetadura</a>
+                    <a href="index.html#laminas">Láminas</a>
+                    <a href="index.html#protectores">Protectores de rodamientos</a>
+                  </div>
+                </div>
+
+                <a href="#categorias" class="nav-mobile-link">
+                  <i class="fa-solid fa-th-large"></i>
+                  <span>Soluciones por categoría</span>
+                </a>
+                <a href="index.html#contacto" class="nav-mobile-link">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>Contacto</span>
+                </a>
+              </div>
+
+              <div class="nav-mobile-cta">
+                <a href="#categorias" class="btn btn-primary btn-block">
+                  <i class="fa-solid fa-layer-group"></i>
+                  Ver soluciones por categoría
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- =========================
+             HERO CATEGORÍAS
+        ========================== -->
+        <section id="categorias" class="hero">
+          <div class="container hero-layout">
+            <div>
+              <div class="hero-chip-row">
+                <span class="chip">SEPCO · Portafolio de productos</span>
+                <span class="chip chip-muted">Soluciones por categoría</span>
+              </div>
+
+              <h1 class="hero-title">
+                <span class="hero-highlight">Encuentre soluciones por categoría</span>
+              </h1>
+
+              <p class="hero-subtitle">
+                Consulte las líneas de productos SEPCO en tres grandes familias: empaquetaduras de
+                compresión, sellos mecánicos y protección de cojinetes.
+              </p>
+
+              <div class="hero-badges">
+                <span class="badge">
+                  <span class="badge-dot"></span>
+                  Empaquetaduras de compresión
+                </span>
+                <span class="badge">
+                  <span class="badge-dot"></span>
+                  Sellos mecánicos
+                </span>
+                <span class="badge">
+                  <span class="badge-dot"></span>
+                  Protección de cojinetes
+                </span>
+              </div>
+
+              <div class="hero-actions">
+                <a href="index.html#contacto" class="btn btn-primary">
+                  <i class="fa-solid fa-file-signature"></i>
+                  Solicite una cotización
+                </a>
+                <a href="#empaquetaduras" class="btn btn-ghost">
+                  <i class="fa-solid fa-circle-arrow-down"></i>
+                  Ver familias de productos
+                </a>
+              </div>
+            </div>
+
+            <!-- Tarjeta lateral con resumen de familias -->
+            <aside class="hero-aside">
+              <div class="hero-card">
+                <div class="hero-card-tagline">Soluciones por categoría</div>
+                <div class="hero-card-title">Portafolio SEPCO</div>
+
+                <div class="hero-card-grid">
+                  <div class="hero-pill">
+                    <strong>Empaquetaduras de compresión</strong>
+                    <span>Bombas, válvulas, otros equipos y accesorios.</span>
+                  </div>
+                  <div class="hero-pill">
+                    <strong>Sellos mecánicos</strong>
+                    <span>Cartucho, componentes, aire y accesorios.</span>
+                  </div>
+                  <div class="hero-pill">
+                    <strong>Protección de cojinetes</strong>
+                    <span>Aisladores de cojinete sin contacto.</span>
+                  </div>
+                  <div class="hero-pill">
+                    <strong>Soporte OGSC SUPPORT MEXICO</strong>
+                    <span>Cobertura en México y Latinoamérica.</span>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- =========================
+             EMPAQUETADURAS DE COMPRESIÓN
+        ========================== -->
+        <section id="empaquetaduras">
+          <div class="container">
+            <header class="section-header">
+              <p class="section-kicker">Soluciones por categoría</p>
+              <h2 class="section-title">Empaquetaduras de compresión</h2>
+              <p class="section-lead">
+                Nuestras variadas combinaciones de fibras y revestimientos le permiten seleccionar
+                la empaquetadura de bomba o de válvula mejor indicada para su aplicación específica.
+              </p>
+            </header>
+
+            <div class="grid grid-2">
+              <!-- Líneas principales -->
+              <article class="card">
+                <h3 class="card-title">Líneas de empaquetaduras</h3>
+                <p class="card-subtitle">Categorías principales de empaquetaduras de compresión:</p>
+
+                <ul class="list-dot">
+                  <li>Empaquetaduras de bomba</li>
+                  <li>Empaquetaduras de válvulas</li>
+                  <li>Empaquetaduras de otros equipos</li>
+                  <li>Accesorios para empaquetaduras</li>
+                </ul>
+              </article>
+
+              <!-- Accesorios -->
+              <article class="card">
+                <h3 class="card-title">Accesorios para empaquetaduras</h3>
+                <p class="card-subtitle">
+                  Accesorios complementarios para instalación, mantenimiento y servicio:
+                </p>
+
+                <ul class="list-dot">
+                  <li>Anillos de cierre estándar</li>
+                  <li>Anillos de cierre flexible</li>
+                  <li>Cortador de embalaje</li>
+                  <li>Ganchos de embalaje</li>
+                  <li>Pak-Lube</li>
+                </ul>
+              </article>
+            </div>
+
+            <!-- Listado de empaquetaduras de bomba (nombres de las cartas) -->
+            <div class="card mt-lg">
+              <h3 class="card-title">Empaquetaduras de bomba</h3>
+              <p class="card-subtitle">
+                Relación de empaquetaduras de bomba mostradas en el catálogo SEPCO:
+              </p>
+
+              <ul class="list-dot">
+                <li>Empaquetadura de fibras acrílicas totalmente trenzada con PTFE</li>
+                <li>
+                  Empaquetadura de fibras acrílicas con esquinas de aramida e impregnación de PTFE
+                </li>
+                <li>Empaquetadura de aramida</li>
+                <li>
+                  Empaquetadura de fibra acrílica totalmente trenzada con una mezcla de
+                  lubricante/grafito
+                </li>
+                <li>Empaquetadura de carbono totalmente trenzada con PTFE</li>
+                <li>Empaquetadura de carbono tratada con partículas de grafito</li>
+                <li>Combinación de fibras de PTFE impregnadas con grafito y fibras de aramida</li>
+                <li>PTFE con grafito encapsulado</li>
+                <li>Trenzado de fibra de vidrio</li>
+                <li>Fibras de lino totalmente trenzadas con dispersión de PTFE y aceite inicial</li>
+                <li>Empaquetadura de lino</li>
+                <li>Empaquetadura flexible de grafito con esquinas de carbono</li>
+                <li>Empaquetadura flexible de grafito con fosfato</li>
+                <li>Empaquetadura flexible de grafito con zinc</li>
+                <li>Graphseall</li>
+                <li>
+                  Hilos de filamentos PTFE recubiertos con grafito y trenzados en una construcción
+                  tipo Multi-Lok
+                </li>
+                <li>
+                  Empaquetadura trenzada tipo Multi-Lok de fibras de Novoloid, con impregnación de
+                  PTFE
+                </li>
+                <li>Empaquetadura prelubricada con PTFE</li>
+                <li>Empaquetadura de alto rendimiento con PTFE exclusivo de SEPCO</li>
+                <li>Empaquetadura hilada de aramida con tratamiento de PTFE</li>
+                <li>Lámina de plomo retorcida</li>
+                <li>
+                  Empaquetadura blanca trenzada con tratamiento de PTFE para el servicio de
+                  alimentos
+                </li>
+                <li>Empaquetadura de grafito 100% GFOB por W.L. Gore</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================
+             SELLOS MECÁNICOS
+        ========================== -->
+        <section id="sellos">
+          <div class="container">
+            <header class="section-header">
+              <p class="section-kicker">Soluciones por categoría</p>
+              <h2 class="section-title">Sellos mecánicos</h2>
+              <p class="section-lead">
+                Nuestros eficaces y duraderos sellos mecánicos ayudan a disminuir los costos
+                operativos y mejoran la confiabilidad del sistema.
+              </p>
+            </header>
+
+            <div class="card">
+              <h3 class="card-title">Líneas de sellos mecánicos</h3>
+              <p class="card-subtitle">
+                Familias de sellos mecánicos presentadas en el catálogo SEPCO:
+              </p>
+
+              <ul class="list-dot">
+                <li>Sellos de cartucho</li>
+                <li>Sellos de componentes</li>
+                <li>Sellos de aire</li>
+                <li>Accesorios para sellos</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================
+             PROTECCIÓN DE COJINETES
+        ========================== -->
+        <section id="cojinetes">
+          <div class="container">
+            <header class="section-header">
+              <p class="section-kicker">Soluciones por categoría</p>
+              <h2 class="section-title">Protección de cojinetes</h2>
+              <p class="section-lead">
+                Aisladores de cojinetes sin contacto para una garantizada confiabilidad de
+                lubricación.
+              </p>
+            </header>
+
+            <div class="grid grid-2">
+              <article class="card">
+                <h3 class="card-title">Aisladores de cojinete</h3>
+                <p class="card-subtitle">
+                  Modelos de aisladores de cojinete mostrados en el catálogo SEPCO:
+                </p>
+
+                <ul class="list-dot">
+                  <li>EXP</li>
+                  <li>EXP-FL</li>
+                  <li>EXP-GB</li>
+                  <li>EXP-PB</li>
+                  <li>EXP-TB</li>
+                </ul>
+              </article>
+
+              <article class="card">
+                <h3 class="card-title">Aplicaciones típicas</h3>
+                <p class="card-subtitle">
+                  Los aisladores de cojinete se utilizan para proteger cojinetes en equipos
+                  rotativos, manteniendo la lubricación libre de contaminación.
+                </p>
+                <p class="text-small text-muted">
+                  Para especificar el modelo adecuado, consulte con el equipo de OGSC SUPPORT MEXICO
+                  y SEPCO proporcionando las condiciones de operación de su equipo.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================
+             BLOQUE BOLETÍN / CTA
+        ========================== -->
+        <section aria-label="Boletín SEPCO" class="mt-lg">
+          <div class="container">
+            <div class="card">
+              <h3 class="card-title">Manténgase informado</h3>
+              <p class="card-subtitle">
+                Nuestro boletín mensual viene repleto de útil información y recursos de la
+                industria.
+              </p>
+
+              <div class="hero-actions">
+                <a href="index.html#contacto" class="btn btn-primary">
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                  ¡SUSCRÍBASE AHORA MISMO!
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- =========================
+           FOOTER
+      ========================== -->
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div class="footer-links">
+            <span>© SEPCO. Todos los Derechos Reservados.</span>
+          </div>
+          <div class="footer-links">
+            <span class="footer-phone">+1-205-403-7500</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
