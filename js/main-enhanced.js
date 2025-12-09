@@ -138,9 +138,7 @@
 
           dropdowns.forEach(other => {
             if (other !== dropdown) {
-              other
-                .querySelector('.nav-dropdown-trigger')
-                ?.setAttribute('aria-expanded', 'false');
+              other.querySelector('.nav-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
             }
           });
 
@@ -278,11 +276,11 @@
         threshold: 0.1,
       };
 
-      this.observer = new IntersectionObserver((entries) => {
+      this.observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animated');
-            
+
             // Agregar delay a elementos hijos
             const children = entry.target.querySelectorAll('[data-delay]');
             children.forEach(child => {
@@ -410,7 +408,7 @@
         {
           rootMargin: '50px 0px',
           threshold: 0.01,
-        }
+        },
       );
 
       document.querySelectorAll('img[loading="lazy"]').forEach(img => {
@@ -511,7 +509,7 @@
 
     setupHoverEffects() {
       // Efecto de tilt en cards
-      document.querySelectorAll('.card, .hero-card').forEach(card => {
+      document.querySelectorAll('.card, .hero-card:not(.no-tilt)').forEach(card => {
         card.addEventListener('mousemove', e => {
           const rect = card.getBoundingClientRect();
           const x = e.clientX - rect.left;
