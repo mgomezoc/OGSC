@@ -38,6 +38,11 @@
     <script src="https://kit.fontawesome.com/fdd43600c0.js" crossorigin="anonymous"></script>
 
     <script src="js/main-enhanced.js"></script>
+
+    <link rel="stylesheet" href="css/fishbone.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="js/fishbone.js" defer></script>
   </head>
   <body>
     <div class="page">
@@ -86,9 +91,9 @@
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
               <div class="nav-dropdown-menu">
-                <a href="http://ogsc.mx/fishbone/" target="_blank" rel="noopener noreferrer">
-                  <i class="fa-solid fa-shield-halved"></i> FISHBONE® - Sellados
-                </a>
+                <a href="#fishbone"
+                  ><i class="fa-solid fa-shield-halved"></i> FISHBONE® - Sellados</a
+                >
                 <a href="http://ogsc.mx/AIGI/" target="_blank" rel="noopener noreferrer">
                   <i class="fa-solid fa-cog"></i> AIGI - Sellos Rotativos
                 </a>
@@ -417,6 +422,946 @@
                   </p>
                 </div>
               </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="fishbone" class="fb-section" aria-labelledby="fishbone-title">
+          <div class="container">
+            <header class="section-header">
+              <p class="section-kicker">Marcas & Tecnologías</p>
+              <h2 class="section-title" id="fishbone-title">FISHBONE® - Sellados</h2>
+              <p class="section-lead">
+                El futuro del sellado de alto rendimiento. Junta metálica patentada con diseño
+                auto-energizado y desempeño superior en control de fugas y resistencia.
+              </p>
+            </header>
+
+            <div class="fb-hero">
+              <div class="fb-hero-copy">
+                <div class="fb-badges">
+                  <span class="chip"><i class="fa-solid fa-certificate"></i> Patentado</span>
+                  <span class="chip chip-muted"
+                    ><i class="fa-solid fa-fire"></i> API 6FB Fire Test</span
+                  >
+                </div>
+
+                <div class="fb-stats">
+                  <article class="card fb-stat">
+                    <h3 class="card-title">1,000,000x</h3>
+                    <p class="text-small text-muted">Menos fugas que el límite TA-LUFT</p>
+                  </article>
+                  <article class="card fb-stat">
+                    <h3 class="card-title">25x</h3>
+                    <p class="text-small text-muted">Menos fugas que Chevron Fugitive Emissions</p>
+                  </article>
+                  <article class="card fb-stat">
+                    <h3 class="card-title">Stop‑Step</h3>
+                    <p class="text-small text-muted">Limitador de compresión anti-aplastamiento</p>
+                  </article>
+                </div>
+
+                <div class="fb-actions">
+                  <a href="#contacto" class="btn btn-primary">Solicitar información</a>
+                  <a href="#fishbone-detalle" class="btn btn-ghost">Ver detalles</a>
+                </div>
+              </div>
+
+              <figure class="fb-hero-media">
+                <img
+                  src="img/fishbone/13.png"
+                  alt="Junta Fishbone® (imagen de referencia)"
+                  loading="lazy"
+                  width="920"
+                  height="620"
+                />
+                <figcaption class="text-small text-muted">
+                  Nota: mantén los assets de Fishbone en <strong>img/fishbone/</strong> para evitar
+                  colisiones con imágenes del sitio.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div id="fishbone-detalle" class="fb-tabs" data-fb-tabs>
+              <div class="fb-tabs-nav" role="tablist" aria-label="Secciones Fishbone">
+                <button
+                  class="fb-tab is-active"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="fb-panel-resumen"
+                  id="fb-tab-resumen"
+                  data-fb-tab="resumen"
+                >
+                  Resumen
+                </button>
+                <button
+                  class="fb-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="fb-panel-caracteristicas"
+                  id="fb-tab-caracteristicas"
+                  data-fb-tab="caracteristicas"
+                >
+                  Características
+                </button>
+                <button
+                  class="fb-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="fb-panel-historia"
+                  id="fb-tab-historia"
+                  data-fb-tab="historia"
+                >
+                  Historia
+                </button>
+                <button
+                  class="fb-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="fb-panel-ventajas"
+                  id="fb-tab-ventajas"
+                  data-fb-tab="ventajas"
+                >
+                  Diseño & Ventajas
+                </button>
+                <button
+                  class="fb-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="fb-panel-pruebas"
+                  id="fb-tab-pruebas"
+                  data-fb-tab="pruebas"
+                >
+                  Pruebas
+                </button>
+                <button
+                  class="fb-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="fb-panel-aplicaciones"
+                  id="fb-tab-aplicaciones"
+                  data-fb-tab="aplicaciones"
+                >
+                  Aplicaciones
+                </button>
+                <button
+                  class="fb-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="fb-panel-especificaciones"
+                  id="fb-tab-especificaciones"
+                  data-fb-tab="especificaciones"
+                >
+                  Especificaciones
+                </button>
+              </div>
+
+              <div class="fb-tabs-panels">
+                <!-- Resumen -->
+                <div
+                  class="fb-panel is-active"
+                  role="tabpanel"
+                  tabindex="0"
+                  aria-labelledby="fb-tab-resumen"
+                  id="fb-panel-resumen"
+                  data-fb-panel="resumen"
+                >
+                  <div class="grid grid-2">
+                    <article class="card">
+                      <h3 class="card-title">¿Por qué Fishbone®?</h3>
+                      <p class="card-subtitle">
+                        Tecnología patentada que revoluciona el sellado industrial, combinando
+                        fuerza, flexibilidad y protección de bridas.
+                      </p>
+                      <ul class="list-dot mt-sm">
+                        <li>Auto‑energizado por presión del fluido</li>
+                        <li>Intercambiable con juntas en espiral y Camprofile</li>
+                        <li>Superficie redondeada: no daña bridas</li>
+                        <li>Diseño robusto: no se desenrolla</li>
+                        <li>Limitador de compresión anti‑aplastamiento</li>
+                        <li>Requisitos de carga mínima y fácil instalación</li>
+                      </ul>
+                    </article>
+
+                    <article class="card">
+                      <h3 class="card-title">Comparación rápida</h3>
+                      <p class="text-small text-muted">
+                        Fishbone® reduce significativamente la fuga frente a juntas espirometálicas
+                        y Camprofile, según resultados de pruebas.
+                      </p>
+                      <div class="fb-mini-metrics mt-sm">
+                        <div class="fb-mini">
+                          <span class="fb-mini-k">ASTM F37</span>
+                          <span class="fb-mini-v">0.02</span>
+                          <span class="fb-mini-s">1×10⁻³ cm³/s</span>
+                        </div>
+                        <div class="fb-mini">
+                          <span class="fb-mini-k">TA‑LUFT</span>
+                          <span class="fb-mini-v">1.6 × 10⁻⁸</span>
+                          <span class="fb-mini-s">(mbar*l)/(s*m)</span>
+                        </div>
+                        <div class="fb-mini">
+                          <span class="fb-mini-k">Compresión</span>
+                          <span class="fb-mini-v">&gt;205</span>
+                          <span class="fb-mini-s">MPa</span>
+                        </div>
+                      </div>
+                      <div class="mt-md">
+                        <a class="btn btn-primary" href="#contacto">Solicitar cotización</a>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+
+                <!-- Características -->
+                <div
+                  class="fb-panel"
+                  role="tabpanel"
+                  tabindex="0"
+                  aria-labelledby="fb-tab-caracteristicas"
+                  id="fb-panel-caracteristicas"
+                  data-fb-panel="caracteristicas"
+                >
+                  <div class="grid grid-3 fb-feature-grid">
+                    <article class="card fb-feature">
+                      <div class="fb-feature-icon">
+                        <img src="img/fishbone/36.png" alt="Auto energizado" loading="lazy" />
+                      </div>
+                      <h3 class="card-title">Auto Energizado</h3>
+                      <p class="text-small text-muted">
+                        Auto‑energizado por la presión del fluido para mejor rendimiento de sellado.
+                      </p>
+                    </article>
+                    <article class="card fb-feature">
+                      <div class="fb-feature-icon">
+                        <img src="img/fishbone/40.png" alt="Intercambiable" loading="lazy" />
+                      </div>
+                      <h3 class="card-title">Intercambiable</h3>
+                      <p class="text-small text-muted">
+                        Compatible con juntas en espiral y Camprofile existentes.
+                      </p>
+                    </article>
+                    <article class="card fb-feature">
+                      <div class="fb-feature-icon">
+                        <img src="img/fishbone/20.png" alt="Protege las bridas" loading="lazy" />
+                      </div>
+                      <h3 class="card-title">Protege las Bridas</h3>
+                      <p class="text-small text-muted">
+                        Superficie de contacto redondeada que no daña las bridas.
+                      </p>
+                    </article>
+                    <article class="card fb-feature">
+                      <div class="fb-feature-icon">
+                        <img src="img/fishbone/52.png" alt="No se desenrolla" loading="lazy" />
+                      </div>
+                      <h3 class="card-title">No se Desenrolla</h3>
+                      <p class="text-small text-muted">
+                        Mantiene integridad estructural bajo cualquier condición.
+                      </p>
+                    </article>
+                    <article class="card fb-feature">
+                      <div class="fb-feature-icon"><i class="fa-solid fa-compress"></i></div>
+                      <h3 class="card-title">Anti Aplastamiento</h3>
+                      <p class="text-small text-muted">
+                        Limitador de compresión que evita la sobre‑compresión.
+                      </p>
+                    </article>
+                    <article class="card fb-feature">
+                      <div class="fb-feature-icon">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                      </div>
+                      <h3 class="card-title">Fácil Instalación</h3>
+                      <p class="text-small text-muted">
+                        Requisitos de carga mínima extremadamente bajos.
+                      </p>
+                    </article>
+                  </div>
+                </div>
+
+                <!-- Historia -->
+                <div
+                  class="fb-panel"
+                  role="tabpanel"
+                  tabindex="0"
+                  aria-labelledby="fb-tab-historia"
+                  id="fb-panel-historia"
+                  data-fb-panel="historia"
+                >
+                  <div class="fb-accordion" data-fb-accordion>
+                    <details class="fb-acc" open>
+                      <summary class="fb-acc-summary">
+                        <span class="fb-acc-title">1912 · Junta en Espiral</span>
+                        <span class="fb-acc-meta">Hace más de 100 años</span>
+                      </summary>
+                      <div class="fb-acc-body">
+                        <div class="grid grid-2">
+                          <figure class="card fb-media">
+                            <img src="img/fishbone/2.jpg" alt="Junta en espiral" loading="lazy" />
+                          </figure>
+                          <article class="card">
+                            <h3 class="card-title">Ventajas / Desventajas</h3>
+                            <div class="grid grid-2 fb-procons mt-sm">
+                              <div>
+                                <strong>Ventajas</strong>
+                                <ul class="list-dot mt-sm">
+                                  <li>
+                                    Combina resistencia de tiras de metal con capacidad de sellado
+                                  </li>
+                                  <li>Auto energizada por la presión del fluido</li>
+                                </ul>
+                              </div>
+                              <div>
+                                <strong>Desventajas</strong>
+                                <ul class="list-dot mt-sm">
+                                  <li>La espiral metálica se desenrolla con facilidad</li>
+                                  <li>Problemas de aplastamiento y alto par de apriete</li>
+                                  <li>
+                                    Estiramiento/fatiga de tornillos y posible rotación de brida
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </details>
+
+                    <details class="fb-acc">
+                      <summary class="fb-acc-summary">
+                        <span class="fb-acc-title">1976 · Juntas Camprofile</span>
+                        <span class="fb-acc-meta">Hace más de 36 años</span>
+                      </summary>
+                      <div class="fb-acc-body">
+                        <div class="grid grid-2">
+                          <figure class="card fb-media">
+                            <img src="img/fishbone/24.png" alt="Junta Camprofile" loading="lazy" />
+                          </figure>
+                          <article class="card">
+                            <h3 class="card-title">Ventajas / Desventajas</h3>
+                            <div class="grid grid-2 fb-procons mt-sm">
+                              <div>
+                                <strong>Ventajas</strong>
+                                <ul class="list-dot mt-sm">
+                                  <li>Fuerte, no se desenrolla</li>
+                                  <li>No tiene problemas de aplastamiento</li>
+                                  <li>Sustituye juntas en espiral</li>
+                                </ul>
+                              </div>
+                              <div>
+                                <strong>Desventajas</strong>
+                                <ul class="list-dot mt-sm">
+                                  <li>Menos elástica y poca recuperación</li>
+                                  <li>Dientes afilados dañan bridas</li>
+                                  <li>No es auto energizada por presión del fluido</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </details>
+
+                    <details class="fb-acc">
+                      <summary class="fb-acc-summary fb-acc-summary--highlight">
+                        <span class="fb-acc-title">Ahora · Junta Fishbone®</span>
+                        <span class="fb-acc-meta">La Evolución</span>
+                      </summary>
+                      <div class="fb-acc-body">
+                        <div class="grid grid-2">
+                          <figure class="card fb-media">
+                            <img src="img/fishbone/13.png" alt="Junta Fishbone®" loading="lazy" />
+                          </figure>
+                          <article class="card">
+                            <h3 class="card-title">Ventajas superiores</h3>
+                            <ul class="list-dot mt-sm">
+                              <li>Equilibra fuerza con flexibilidad</li>
+                              <li>Reemplaza juntas metálicas</li>
+                              <li>Cuida superficie de bridas</li>
+                              <li>No se desenrolla ni se deshace</li>
+                              <li>Requisitos de carga mínima extremadamente bajos</li>
+                              <li>Mejora sustancialmente el rendimiento del sellado</li>
+                            </ul>
+                          </article>
+                        </div>
+                      </div>
+                    </details>
+                  </div>
+                </div>
+
+                <!-- Diseño & Ventajas -->
+                <div
+                  class="fb-panel"
+                  role="tabpanel"
+                  tabindex="0"
+                  aria-labelledby="fb-tab-ventajas"
+                  id="fb-panel-ventajas"
+                  data-fb-panel="ventajas"
+                >
+                  <div class="grid grid-2">
+                    <article class="card">
+                      <h3 class="card-title">Diseño</h3>
+                      <ul class="list-dot mt-sm">
+                        <li>
+                          Nervaduras concéntricas biseladas helicoidales (grafito, PTFE o mica)
+                        </li>
+                        <li>Diseño unitario con o sin anillo de centrado</li>
+                        <li>Superficie redondeada (no afilada)</li>
+                        <li>Limitador de compresión (Stop‑Step)</li>
+                      </ul>
+                      <figure class="fb-inline-media mt-md">
+                        <img src="img/fishbone/13.png" alt="Diseño Fishbone®" loading="lazy" />
+                      </figure>
+                    </article>
+
+                    <article class="card">
+                      <h3 class="card-title">Ventajas</h3>
+                      <div class="fb-adv mt-sm">
+                        <div class="fb-adv-item">
+                          <img src="img/fishbone/36.png" alt="Auto energizado" loading="lazy" />
+                          <div>
+                            <strong>Auto Energizado</strong>
+                            <p class="text-small text-muted">
+                              Auto energizado por la presión de fluido.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="fb-adv-item">
+                          <img src="img/fishbone/40.png" alt="Intercambiable" loading="lazy" />
+                          <div>
+                            <strong>Intercambiable</strong>
+                            <p class="text-small text-muted">
+                              Intercambiable con juntas en espiral y Camprofile.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="fb-adv-item">
+                          <img src="img/fishbone/20.png" alt="No daña bridas" loading="lazy" />
+                          <div>
+                            <strong>No Daña Bridas</strong>
+                            <p class="text-small text-muted">
+                              No daña la brida como Camprofile y espirometálicas.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="fb-adv-item">
+                          <img
+                            src="img/fishbone/52.png"
+                            alt="Evita sobre compresión"
+                            loading="lazy"
+                          />
+                          <div>
+                            <strong>Evita Sobre Compresión</strong>
+                            <p class="text-small text-muted">
+                              Evita la sobre compresión del elemento de sellado.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="card mt-md">
+                    <h3 class="card-title">Cambiar esto por esto</h3>
+                    <div class="grid grid-2 mt-sm fb-compare">
+                      <div class="fb-compare-card">
+                        <h4 class="fb-compare-title">Juntas espirometálicas desenrolladas</h4>
+                        <img src="img/fishbone/3.png" alt="Antes: espirometálicas" loading="lazy" />
+                        <div class="fb-compare-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <img src="img/fishbone/13.png" alt="Después: Fishbone®" loading="lazy" />
+                      </div>
+                      <div class="fb-compare-card">
+                        <h4 class="fb-compare-title">Dientes Camprofile que dañan brida</h4>
+                        <img src="img/fishbone/6.jpg" alt="Antes: Camprofile" loading="lazy" />
+                        <div class="fb-compare-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <img src="img/fishbone/13.png" alt="Después: Fishbone®" loading="lazy" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Pruebas -->
+                <div
+                  class="fb-panel"
+                  role="tabpanel"
+                  tabindex="0"
+                  aria-labelledby="fb-tab-pruebas"
+                  id="fb-panel-pruebas"
+                  data-fb-panel="pruebas"
+                  data-fb-init-charts="true"
+                >
+                  <div class="fb-tests">
+                    <details class="fb-acc" open>
+                      <summary class="fb-acc-summary">
+                        <span class="fb-acc-title">Test de Fuga (ASTM F37)</span>
+                        <span class="fb-acc-meta">N₂ 4 MPa / 580 psi · Stress 30 MPa</span>
+                      </summary>
+                      <div class="fb-acc-body">
+                        <div class="grid grid-2">
+                          <article class="card">
+                            <h3 class="card-title">Tabla</h3>
+                            <div class="fb-table-wrap">
+                              <table class="fb-table">
+                                <thead>
+                                  <tr>
+                                    <th>Item probado</th>
+                                    <th>Tasa de fuga (1×10⁻³ cm³/s)</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr class="fb-row-highlight">
+                                    <td>Fishbone® (Tipo Básico) 8mm Ancho, 3.5mm Grosor</td>
+                                    <td><strong>0.02</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Camprofile 8mm Ancho, 3.2mm Grosor</td>
+                                    <td>0.2</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Espirometálica 8mm Ancho, 3.5mm Grosor</td>
+                                    <td>0.6</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </article>
+                          <article class="card">
+                            <h3 class="card-title">Gráfica</h3>
+                            <canvas
+                              id="fbChartLeakage"
+                              height="220"
+                              aria-label="Gráfica comparativa de fuga"
+                              role="img"
+                            ></canvas>
+                          </article>
+                        </div>
+                      </div>
+                    </details>
+
+                    <details class="fb-acc">
+                      <summary class="fb-acc-summary">
+                        <span class="fb-acc-title">Prueba TA‑LUFT</span>
+                        <span class="fb-acc-meta">VDI 2440 & VDI 2200</span>
+                      </summary>
+                      <div class="fb-acc-body">
+                        <div class="grid grid-2">
+                          <article class="card">
+                            <h3 class="card-title">Tabla</h3>
+                            <div class="fb-table-wrap">
+                              <table class="fb-table">
+                                <thead>
+                                  <tr>
+                                    <th>Item probado</th>
+                                    <th>Tasa de fuga (mbar*l)/(s*m)</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr class="fb-row-highlight">
+                                    <td>Fishbone® (Tipo Básico)</td>
+                                    <td><strong>1.6 × 10⁻⁸</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Camprofile</td>
+                                    <td>1.0 × 10⁻⁶ *</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Espirometálica</td>
+                                    <td>1.0 × 10⁻⁴ *</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <p class="text-small text-muted mt-sm">
+                                *Valores promedio de un laboratorio internacional acreditado
+                              </p>
+                              <div class="fb-note mt-sm">
+                                <i class="fa-solid fa-certificate"></i>
+                                <span
+                                  >Fishbone® está catalogada como junta de alto rendimiento de
+                                  acuerdo con TA‑Luft.</span
+                                >
+                              </div>
+                            </div>
+                          </article>
+                          <article class="card">
+                            <h3 class="card-title">Gráfica (escala log)</h3>
+                            <canvas
+                              id="fbChartTaluft"
+                              height="220"
+                              aria-label="Gráfica comparativa TA-LUFT"
+                              role="img"
+                            ></canvas>
+                          </article>
+                        </div>
+                      </div>
+                    </details>
+
+                    <details class="fb-acc">
+                      <summary class="fb-acc-summary">
+                        <span class="fb-acc-title">Resistencia a la Compresión</span>
+                        <span class="fb-acc-meta">Presión 205 MPa / 29732 psi</span>
+                      </summary>
+                      <div class="fb-acc-body">
+                        <div class="grid grid-2">
+                          <article class="card">
+                            <h3 class="card-title">Tabla</h3>
+                            <div class="fb-table-wrap">
+                              <table class="fb-table">
+                                <thead>
+                                  <tr>
+                                    <th>Item probado</th>
+                                    <th>Presión aplastamiento (MPa)</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr class="fb-row-highlight">
+                                    <td>Fishbone® 22.5mm Ancho, 4.5mm Grosor</td>
+                                    <td><strong>&gt;205</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Espirometálicas 22.5mm Ancho, 4.5mm Grosor</td>
+                                    <td>54</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </article>
+                          <article class="card">
+                            <h3 class="card-title">Gráfica</h3>
+                            <canvas
+                              id="fbChartCompression"
+                              height="220"
+                              aria-label="Gráfica comparativa de compresión"
+                              role="img"
+                            ></canvas>
+                          </article>
+                        </div>
+                      </div>
+                    </details>
+                  </div>
+                </div>
+
+                <!-- Aplicaciones -->
+                <div
+                  class="fb-panel"
+                  role="tabpanel"
+                  tabindex="0"
+                  aria-labelledby="fb-tab-aplicaciones"
+                  id="fb-panel-aplicaciones"
+                  data-fb-panel="aplicaciones"
+                >
+                  <div class="grid grid-3">
+                    <article class="card">
+                      <h3 class="card-title">
+                        <i class="fa-solid fa-industry"></i> Bridas críticas
+                      </h3>
+                      <p class="text-small text-muted">
+                        Solución confiable para aplicaciones de alta criticidad.
+                      </p>
+                    </article>
+                    <article class="card">
+                      <h3 class="card-title"><i class="fa-solid fa-wind"></i> Bajas emisiones</h3>
+                      <p class="text-small text-muted">
+                        Cumple con normativas estrictas de emisiones.
+                      </p>
+                    </article>
+                    <article class="card">
+                      <h3 class="card-title">
+                        <i class="fa-solid fa-gauge-high"></i> Alta presión
+                      </h3>
+                      <p class="text-small text-muted">
+                        Rendimiento superior en condiciones de alta presión.
+                      </p>
+                    </article>
+                    <article class="card">
+                      <h3 class="card-title"><i class="fa-solid fa-temperature-high"></i> Vapor</h3>
+                      <p class="text-small text-muted">
+                        Ideal para aplicaciones con vapor y altas temperaturas.
+                      </p>
+                    </article>
+                    <article class="card">
+                      <h3 class="card-title"><i class="fa-solid fa-fire"></i> Fire Test</h3>
+                      <p class="text-small text-muted">Prueba superada API 6FB Fire Test.</p>
+                    </article>
+                    <article class="card">
+                      <h3 class="card-title"><i class="fa-solid fa-gears"></i> Equipos</h3>
+                      <p class="text-small text-muted">
+                        Sustitución directa de juntas espirales y Camprofile.
+                      </p>
+                    </article>
+                  </div>
+
+                  <div class="card mt-md">
+                    <h3 class="card-title">Aplicaciones en planta</h3>
+                    <div class="grid grid-3 mt-sm fb-diagram">
+                      <figure class="fb-diagram-item">
+                        <img src="img/fishbone/16.png" alt="Junta de brida" loading="lazy" />
+                        <figcaption class="text-small text-muted">Junta de brida</figcaption>
+                      </figure>
+                      <figure class="fb-diagram-item">
+                        <img src="img/fishbone/17.png" alt="Junta de válvula" loading="lazy" />
+                        <figcaption class="text-small text-muted">Junta de válvula</figcaption>
+                      </figure>
+                      <figure class="fb-diagram-item">
+                        <img
+                          src="img/fishbone/18.png"
+                          alt="Juntas intercambiadores"
+                          loading="lazy"
+                        />
+                        <figcaption class="text-small text-muted">
+                          Juntas intercambiadores
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Especificaciones -->
+                <div
+                  class="fb-panel"
+                  role="tabpanel"
+                  tabindex="0"
+                  aria-labelledby="fb-tab-especificaciones"
+                  id="fb-panel-especificaciones"
+                  data-fb-panel="especificaciones"
+                >
+                  <div class="fb-accordion" data-fb-accordion>
+                    <details class="fb-acc" open>
+                      <summary class="fb-acc-summary">
+                        <span class="fb-acc-title">Materiales</span
+                        ><span class="fb-acc-meta">Metales y no metálicos</span>
+                      </summary>
+                      <div class="fb-acc-body">
+                        <div class="grid grid-2">
+                          <article class="card">
+                            <h3 class="card-title">
+                              <i class="fa-solid fa-layer-group"></i> Metales
+                            </h3>
+                            <ul class="list-dot mt-sm">
+                              <li>304, 304L</li>
+                              <li>316, 316L</li>
+                              <li>321</li>
+                              <li>Otros materiales disponibles a solicitud</li>
+                            </ul>
+                          </article>
+                          <article class="card">
+                            <h3 class="card-title">
+                              <i class="fa-solid fa-shield-halved"></i> No metálicos
+                            </h3>
+                            <ul class="list-dot mt-sm">
+                              <li>Grafito Flexible</li>
+                              <li>PTFE</li>
+                              <li>Mica</li>
+                              <li>H.T.GR (Grafito Alta Temperatura)</li>
+                              <li>ePTFE (PTFE expandido)</li>
+                            </ul>
+                          </article>
+                        </div>
+                      </div>
+                    </details>
+
+                    <details class="fb-acc">
+                      <summary class="fb-acc-summary">
+                        <span class="fb-acc-title">Temperatura</span
+                        ><span class="fb-acc-meta">Rangos por material</span>
+                      </summary>
+                      <div class="fb-acc-body">
+                        <article class="card">
+                          <div class="fb-table-wrap">
+                            <table class="fb-table">
+                              <thead>
+                                <tr>
+                                  <th>Material de la cara</th>
+                                  <th>Mín. °C</th>
+                                  <th>Máx. °C</th>
+                                  <th>Mín. °F</th>
+                                  <th>Máx. °F</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Grafito Flexible</td>
+                                  <td>-212</td>
+                                  <td>400</td>
+                                  <td>-350</td>
+                                  <td>750</td>
+                                </tr>
+                                <tr>
+                                  <td>PTFE</td>
+                                  <td>-200</td>
+                                  <td>260</td>
+                                  <td>-400</td>
+                                  <td>500</td>
+                                </tr>
+                                <tr>
+                                  <td>H.T.GR (Grafito Alta Temp.)</td>
+                                  <td>-200</td>
+                                  <td>550</td>
+                                  <td>-418</td>
+                                  <td>1022</td>
+                                </tr>
+                                <tr>
+                                  <td>ePTFE (PTFE expandido)</td>
+                                  <td>-200</td>
+                                  <td>260</td>
+                                  <td>-400</td>
+                                  <td>500</td>
+                                </tr>
+                                <tr>
+                                  <td>Mica</td>
+                                  <td>-212</td>
+                                  <td>1000</td>
+                                  <td>-350</td>
+                                  <td>1850</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </article>
+                      </div>
+                    </details>
+
+                    <details class="fb-acc">
+                      <summary class="fb-acc-summary">
+                        <span class="fb-acc-title">Características (diseño)</span
+                        ><span class="fb-acc-meta">Nervaduras, Stop‑Step, tipos</span>
+                      </summary>
+                      <div class="fb-acc-body">
+                        <div class="grid grid-2">
+                          <article class="card">
+                            <h3 class="card-title">1 · Nervaduras concéntricas</h3>
+                            <p class="text-small text-muted">
+                              Nervaduras concéntricas biseladas helicoidales; el número crece con la
+                              clase de presión.
+                            </p>
+                            <img
+                              class="fb-img-sm"
+                              src="img/fishbone/13.png"
+                              alt="Nervaduras"
+                              loading="lazy"
+                            />
+                          </article>
+                          <article class="card">
+                            <h3 class="card-title">2 · Stop‑Step</h3>
+                            <p class="text-small text-muted">
+                              Limitador de compresión con uno o dos topes según el ancho.
+                            </p>
+                            <div class="fb-img-row">
+                              <img
+                                src="img/fishbone/14.png"
+                                alt="Stop-step simple"
+                                loading="lazy"
+                              />
+                              <img src="img/fishbone/15.png" alt="Stop-step doble" loading="lazy" />
+                            </div>
+                          </article>
+                          <article class="card">
+                            <h3 class="card-title">3 · Auto energizado</h3>
+                            <p class="text-small text-muted">
+                              Auto energizado por presión del fluido para mejor rendimiento.
+                            </p>
+                            <img
+                              class="fb-img-sm"
+                              src="img/fishbone/36.png"
+                              alt="Auto energizado"
+                              loading="lazy"
+                            />
+                          </article>
+                          <article class="card">
+                            <h3 class="card-title">4 · Diseño unitario</h3>
+                            <p class="text-small text-muted">
+                              Con o sin anillo de centrado (tipo básico / anillo).
+                            </p>
+                            <div class="fb-img-row">
+                              <img src="img/fishbone/13.png" alt="Tipo básico" loading="lazy" />
+                              <img
+                                src="img/fishbone/13.png"
+                                alt="Tipo anillo de centrado"
+                                loading="lazy"
+                              />
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </details>
+
+                    <details class="fb-acc">
+                      <summary class="fb-acc-summary">
+                        <span class="fb-acc-title">Tamaños y estándares</span
+                        ><span class="fb-acc-meta">Imperial / Métrico</span>
+                      </summary>
+                      <div class="fb-acc-body">
+                        <div class="grid grid-2">
+                          <article class="card">
+                            <h3 class="card-title">Tamaños estándar</h3>
+                            <ul class="list-dot mt-sm">
+                              <li><strong>Imperial:</strong> NPS 1/2" ~ 60" · Clase 150 ~ 2500</li>
+                              <li><strong>Métrico:</strong> DN 10 ~ 2000 · PN 1.6 ~ 40</li>
+                            </ul>
+                          </article>
+                          <article class="card">
+                            <h3 class="card-title">Estándares internacionales</h3>
+                            <div class="fb-standards mt-sm">
+                              <span class="pill">EN 1514</span>
+                              <span class="pill">EN 12560</span>
+                              <span class="pill">ASME B16.20</span>
+                              <span class="pill">ANSI B 16.21</span>
+                              <span class="pill">API 601</span>
+                              <span class="pill">DIN 2690~2692</span>
+                              <span class="pill">JIS B2404</span>
+                              <span class="pill">JPI-7S-41</span>
+                              <span class="pill">BS 4865</span>
+                              <span class="pill">BS 3381</span>
+                              <span class="pill">BS 10</span>
+                              <span class="pill">BS 4504</span>
+                            </div>
+                          </article>
+                        </div>
+
+                        <article class="card mt-md">
+                          <div class="fb-note">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span
+                              >Para requerimientos estándar y no estándar, consulte con AIGI
+                              Environmental Inc.</span
+                            >
+                          </div>
+                        </article>
+
+                        <article class="card mt-md">
+                          <h3 class="card-title">
+                            <i class="fa-solid fa-fire-flame-curved"></i> ¡Intercambiador de calor
+                            disponible!
+                          </h3>
+                          <div class="fb-exchanger mt-sm">
+                            <img src="img/fishbone/66.png" alt="Tipo 1" loading="lazy" />
+                            <img src="img/fishbone/67.png" alt="Tipo 2" loading="lazy" />
+                            <img src="img/fishbone/68.png" alt="Tipo 3" loading="lazy" />
+                            <img src="img/fishbone/69.png" alt="Tipo 4" loading="lazy" />
+                            <img src="img/fishbone/70.png" alt="Tipo 5" loading="lazy" />
+                            <img src="img/fishbone/71.png" alt="Tipo 6" loading="lazy" />
+                            <img src="img/fishbone/72.png" alt="Tipo 7" loading="lazy" />
+                            <img src="img/fishbone/73.jpg" alt="Tipo 8" loading="lazy" />
+                          </div>
+                          <p class="text-small text-muted mt-sm">¡Y más!</p>
+                        </article>
+                      </div>
+                    </details>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="fb-footer">
+              <p class="text-small text-muted">
+                Fishbone® es una marca registrada. Distribuido por
+                <strong>OGSC SUPPORT MEXICO</strong>.
+              </p>
             </div>
           </div>
         </section>
