@@ -1,26 +1,20 @@
 (function () {
   'use strict';
 
-  // Solo inicializa tabs dentro de la sección Fishbone
+  // Solo inicializa tabs dentro de la sección AIGI
   const root =
-    document.querySelector('#fishbone [data-fb-tabs]') ||
-    document.getElementById('fishbone-detalle');
+    document.querySelector('#aigi [data-fb-tabs]') || document.getElementById('aigi-detalle');
 
   if (!root) return;
 
-  initTabsGroup(root, {
-    scope: 'fishbone',
-    enableCharts: true,
-  });
+  initTabsGroup(root, { scope: 'aigi' });
 
   function initTabsGroup(rootEl, opts) {
-    const scope = (opts?.scope || 'fishbone').toLowerCase();
-    const enableCharts = !!opts?.enableCharts;
+    const scope = (opts?.scope || 'aigi').toLowerCase();
 
     const tabs = Array.from(rootEl.querySelectorAll('[data-fb-tab]'));
     if (!tabs.length) return;
 
-    // Panels: prefer [data-fb-panel], else infer via aria-controls
     const explicitPanels = Array.from(rootEl.querySelectorAll('[data-fb-panel]'));
     const hasExplicitPanels = explicitPanels.length > 0;
 
@@ -45,7 +39,7 @@
       });
     }
 
-    // Deep-link: #fishbone-resumen, #fishbone-pruebas, etc.
+    // Deep-link: #aigi-resumen, #aigi-productos, etc.
     const names = tabs
       .map(t => (t.getAttribute('data-fb-tab') || '').toLowerCase())
       .filter(Boolean);
@@ -62,7 +56,6 @@
     const setActive = (name, pushHash = true) => {
       const key = (name || '').toLowerCase();
 
-      // Tabs
       tabs.forEach(btn => {
         const active = (btn.getAttribute('data-fb-tab') || '').toLowerCase() === key;
         btn.classList.toggle('is-active', active);
@@ -70,7 +63,6 @@
         btn.tabIndex = active ? 0 : -1;
       });
 
-      // Panels
       if (hasExplicitPanels) {
         explicitPanels.forEach(panel => {
           const active = (panel.getAttribute('data-fb-panel') || '').toLowerCase() === key;
@@ -92,17 +84,12 @@
       if (pushHash) {
         history.replaceState(null, '', `#${scope}-${key}`);
       }
-
-      // Charts (solo Fishbone)
-      if (enableCharts && key === 'pruebas') initChartsOnce();
     };
 
-    // Click
     tabs.forEach(btn => {
       btn.addEventListener('click', () => setActive(btn.getAttribute('data-fb-tab')));
     });
 
-    // Keyboard navigation (Left/Right + Home/End)
     const nav = rootEl.querySelector('.fb-tabs-nav');
     nav?.addEventListener('keydown', e => {
       const current = document.activeElement;
@@ -137,87 +124,5 @@
       const tab = fromHash();
       if (tab) setActive(tab, false);
     });
-
-    // ------------------------------------------------------------
-    // Charts (Chart.js) - Fishbone / Pruebas
-    // ------------------------------------------------------------
-    let chartsInited = false;
-
-    function initChartsOnce() {
-      if (chartsInited) return;
-      if (typeof window.Chart === 'undefined') return;
-
-      const leak = document.getElementById('fbChartLeakage');
-      const taluft = document.getElementById('fbChartTaluft');
-      const comp = document.getElementById('fbChartCompression');
-
-      if (!leak || !taluft || !comp) return;
-
-      new Chart(leak, {
-        type: 'bar',
-        data: {
-          labels: ['Fishbone®', 'Camprofile', 'Espirometálica'],
-          datasets: [{ label: 'Tasa de fuga (1×10⁻³ cm³/s)', data: [0.02, 0.2, 0.6] }],
-        },
-        options: {
-          responsive: true,
-          plugins: { legend: { display: true } },
-          scales: { y: { beginAtZero: true } },
-        },
-      });
-
-      new Chart(taluft, {
-        type: 'bar',
-        data: {
-          labels: ['Fishbone®', 'Camprofile', 'Espirometálica'],
-          datasets: [{ label: 'Tasa de fuga (mbar*l)/(s*m)', data: [1.6e-8, 1.0e-6, 1.0e-4] }],
-        },
-        options: {
-          responsive: true,
-          plugins: { legend: { display: true } },
-          scales: {
-            y: {
-              type: 'logarithmic',
-              min: 1e-9,
-              max: 1e-3,
-              ticks: {
-                callback: v => {
-                  const val = Number(v);
-                  if (!isFinite(val)) return '';
-                  return val.toExponential(0);
-                },
-              },
-            },
-          },
-        },
-      });
-
-      new Chart(comp, {
-        type: 'bar',
-        data: {
-          labels: ['Fishbone®', 'Espirometálica'],
-          datasets: [{ label: 'Presión aplastamiento (MPa)', data: [205, 54] }],
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: { display: true },
-            tooltip: {
-              callbacks: {
-                label: ctx => {
-                  const v = ctx.raw;
-                  return ctx.label === 'Fishbone®'
-                    ? `Fishbone®: >${v} MPa`
-                    : `${ctx.label}: ${v} MPa`;
-                },
-              },
-            },
-          },
-          scales: { y: { beginAtZero: true } },
-        },
-      });
-
-      chartsInited = true;
-    }
   }
 })();
